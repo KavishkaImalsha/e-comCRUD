@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { ChevronLeft, Bookmark } from 'lucide-react';
 
 const Details = () => {
     const [selectedColor, setSelectedColor] = useState('orange')
@@ -15,6 +16,17 @@ const Details = () => {
   return (
     <>
         <div>
+            <div className='mb-5 mx-5 flex items-center justify-between'>
+                <button className=''>
+                    <ChevronLeft className='w-8 h-8'/>
+                </button>
+                <div className='text-[18px] font-imprima'>
+                    Details
+                </div>
+                <button>
+                    <Bookmark className='w-6 h-6'/>
+                </button>
+            </div>
             <div className='flex justify-center'>
                 <Image
                     src="/images/ProductImage.png"

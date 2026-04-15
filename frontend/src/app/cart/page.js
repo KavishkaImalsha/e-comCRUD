@@ -1,6 +1,7 @@
 'use client'
 import React, { useMemo, useState } from 'react'
 import SwipeableItem from './SwipeableItem.js'
+import { ChevronLeft } from 'lucide-react';
 
 const Cart = () => {
     const items = [
@@ -17,6 +18,14 @@ const Cart = () => {
     const [delFee, setDelFee] = useState(10)
   return (
     <div className='mx-8 mt-5'>
+        <div className='mb-5 flex items-center'>
+            <button className=''>
+                <ChevronLeft className='w-8 h-8'/>
+            </button>
+            <div className='text-[18px] font-imprima pl-30'>
+                Cart
+            </div>
+        </div>
         <h1 className='text-[42px] font-bold font-imprima'>My Orders</h1>
         <div>
             {items.map((item, idx) => (
