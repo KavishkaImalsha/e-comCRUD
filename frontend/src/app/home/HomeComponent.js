@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { LayoutPanelLeft } from 'lucide-react';
+import { LayoutPanelLeft, House, ShoppingBasket, Search, Settings } from 'lucide-react';
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -46,6 +46,31 @@ const Home = ({products}) => {
               </div>
             </Link>
           ))}
+        </div>
+        <div className='fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-8 py-4 flex justify-between items-center z-50'>
+          <Link
+            href='/home'
+          >
+            <House className='w-10 h-10'/>
+          </Link>
+
+          <Link
+            href='/cart'
+          >
+            <ShoppingBasket className='w-10 h-10'/>
+          </Link>
+
+          <Link
+            href='/home'
+          >
+            <Search className='w-10 h-10'/>
+          </Link>
+          
+          <Link
+            href='/home'
+          >
+            <Settings className='w-10 h-10'/>
+          </Link>
         </div>
       </div>
     </>
