@@ -42,7 +42,7 @@ const Details = ({product}) => {
                         onClick={() => setSelectedColor(color)}
                         className={`
                             w-8 h-8 rounded-full transition-all duration-200 
-                            ${color}
+                            bg-${color}-500
                             ${selectedColor === color 
                             ? 'ring-2 ring-offset-2 ring-blue-400 scale-110' 
                             : 'hover:scale-105 opacity-80 hover:opacity-100'}

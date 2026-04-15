@@ -31,7 +31,7 @@ export const getProducts = async() => {
 export const getProductById = async (id) => {
     try {
         const baseUrl = process.env.BACKEND_URL || 'http://localhost:3000';
-        const response = await fetch(`${baseUrl}/products/${id}`);
+        const response = await fetch(`${baseUrl}/products/${id}`, {caches: 'no-store'});
         const result = await response.json();
         return result;
     } catch (error) {

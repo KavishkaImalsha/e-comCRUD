@@ -2,6 +2,7 @@
 import React, { useMemo, useState } from 'react'
 import SwipeableItem from './SwipeableItem.js'
 import { ChevronLeft } from 'lucide-react';
+import Link from 'next/link.js';
 
 const Cart = () => {
     const items = [
@@ -19,9 +20,9 @@ const Cart = () => {
   return (
     <div className='mx-8 mt-5'>
         <div className='mb-5 flex items-center'>
-            <button className=''>
+            <Link href='/home'>
                 <ChevronLeft className='w-8 h-8'/>
-            </button>
+            </Link>
             <div className='text-[18px] font-imprima pl-30'>
                 Cart
             </div>
